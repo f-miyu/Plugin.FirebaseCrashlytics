@@ -1,4 +1,5 @@
 ﻿using System;
+using Crashlytics;
 
 namespace Plugin.FirebaseCrashlytics
 {
@@ -19,9 +20,19 @@ namespace Plugin.FirebaseCrashlytics
             Crashlytics.Crashlytics.SetInt(key, value);
         }
 
+        public void SetLong(string key, long value)
+        {
+            Crashlytics.Crashlytics.SetLong(key, value);
+        }
+
         public void SetFloat(string key, float value)
         {
             Crashlytics.Crashlytics.SetFloat(key, value);
+        }
+
+        public void SetDouble(string key, double value)
+        {
+            Crashlytics.Crashlytics.SetDouble(key, value);
         }
 
         public void SetString(string key, string value)
@@ -46,7 +57,7 @@ namespace Plugin.FirebaseCrashlytics
 
         public void LogException(Exception exception)
         {
-            Crashlytics.Crashlytics.LogException(new Java.Lang.Exception(exception.Message));
+            Crashlytics.Crashlytics.LogException(MonoExceptionHelper.Create(exception));
         }
 
         public void Log(string message)

@@ -68,6 +68,18 @@
     <PackageReference Include="Xamarin.Firebase.Core">
       <Version>60.1142.1</Version>
     </PackageReference>
+    <PackageReference Include="Xamarin.Android.Crashlytics.Beta">
+      <Version>1.2.9</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Crashlytics.Answers">
+      <Version>1.4.2</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Fabric">
+      <Version>1.4.3</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Crashlytics.Core">
+      <Version>2.6.3</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />

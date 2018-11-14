@@ -20,6 +20,26 @@ namespace Plugin.FirebaseCrashlytics.Sample.ViewModels
 
             CrashCommand = new DelegateCommand(() =>
             {
+                CrossFirebaseCrashlytics.Current.SetInt("aaa", 1);
+                CrossFirebaseCrashlytics.Current.SetLong("bbb", long.MaxValue);
+                CrossFirebaseCrashlytics.Current.SetFloat("ccc", 1.5f);
+                CrossFirebaseCrashlytics.Current.SetDouble("ddd", double.MaxValue);
+                CrossFirebaseCrashlytics.Current.SetBool("eee", true);
+                CrossFirebaseCrashlytics.Current.SetString("fff", "test");
+
+                CrossFirebaseCrashlytics.Current.SetUserIdentifier("id123");
+
+                CrossFirebaseCrashlytics.Current.Log("test");
+
+                try
+                {
+                    throw new NullReferenceException();
+                }
+                catch (Exception e)
+                {
+                    CrossFirebaseCrashlytics.Current.LogException(e);
+                }
+
                 CrossFirebaseCrashlytics.Current.Crash();
             });
         }

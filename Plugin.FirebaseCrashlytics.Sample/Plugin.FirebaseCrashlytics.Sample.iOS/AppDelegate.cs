@@ -23,6 +23,7 @@ namespace Plugin.FirebaseCrashlytics.Sample.iOS
         {
             Firebase.Core.App.Configure();
             Firebase.Crashlytics.Crashlytics.Configure();
+            Firebase.Crashlytics.Crashlytics.SharedInstance.DebugMode = true;
 
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App(new iOSInitializer()));

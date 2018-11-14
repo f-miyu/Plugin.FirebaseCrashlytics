@@ -90,6 +90,9 @@
     <Reference Include="Xamarin.Android.Crashlytics">
       <HintPath>..\packages\Xamarin.Android.Crashlytics.2.9.4.1\lib\monoandroid60\Xamarin.Android.Crashlytics.dll</HintPath>
     </Reference>
+    <Reference Include="Xamarin.Android.Crashlytics.Core">
+      <HintPath>..\packages\Xamarin.Android.Crashlytics.Core.2.6.3\lib\monoandroid60\Xamarin.Android.Crashlytics.Core.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -118,4 +121,5 @@
   <Import Project="..\packages\Xamarin.Firebase.Analytics.Impl.60.1142.1\build\MonoAndroid80\Xamarin.Firebase.Analytics.Impl.targets" Condition="Exists('..\packages\Xamarin.Firebase.Analytics.Impl.60.1142.1\build\MonoAndroid80\Xamarin.Firebase.Analytics.Impl.targets')" />
   <Import Project="..\packages\Xamarin.Firebase.Analytics.60.1142.1\build\MonoAndroid80\Xamarin.Firebase.Analytics.targets" Condition="Exists('..\packages\Xamarin.Firebase.Analytics.60.1142.1\build\MonoAndroid80\Xamarin.Firebase.Analytics.targets')" />
   <Import Project="..\packages\Xamarin.Android.Crashlytics.2.9.4.1\build\Xamarin.Android.Crashlytics.targets" Condition="Exists('..\packages\Xamarin.Android.Crashlytics.2.9.4.1\build\Xamarin.Android.Crashlytics.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Crashlytics.Core.2.6.3\build\Xamarin.Android.Crashlytics.Core.targets" Condition="Exists('..\packages\Xamarin.Android.Crashlytics.Core.2.6.3\build\Xamarin.Android.Crashlytics.Core.targets')" />
 </Project>

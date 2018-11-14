@@ -1,6 +1,8 @@
 ﻿using System;
 using Firebase.Crashlytics;
 using Foundation;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Plugin.FirebaseCrashlytics
 {
@@ -21,9 +23,19 @@ namespace Plugin.FirebaseCrashlytics
             Crashlytics.SharedInstance.SetValue(value, key);
         }
 
+        public void SetLong(string key, long value)
+        {
+            Crashlytics.SharedInstance.SetValue(new NSNumber(value), key);
+        }
+
         public void SetFloat(string key, float value)
         {
             Crashlytics.SharedInstance.SetValue(value, key);
+        }
+
+        public void SetDouble(string key, double value)
+        {
+            Crashlytics.SharedInstance.SetValue(new NSNumber(value), key);
         }
 
         public void SetString(string key, string value)
@@ -48,7 +60,17 @@ namespace Plugin.FirebaseCrashlytics
 
         public void LogException(Exception exception)
         {
-            Crashlytics.SharedInstance.RecordError(new NSError(new NSString(exception.GetType().Name), -1));
+            var userInfo = new Dictionary<object, object>
+            {
+                [NSError.LocalizedDescriptionKey] = exception.Message,
+                ["StackTrace"] = exception.StackTrace
+            };
+
+            var error = new NSError(new NSString(exception.GetType().FullName),
+                                    -1,
+                                    NSDictionary.FromObjectsAndKeys(userInfo.Values.ToArray(), userInfo.Keys.ToArray(), userInfo.Count));
+
+            Crashlytics.SharedInstance.RecordError(error);
         }
 
         public void Log(string message)

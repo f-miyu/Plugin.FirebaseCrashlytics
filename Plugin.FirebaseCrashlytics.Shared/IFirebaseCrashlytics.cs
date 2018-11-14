@@ -6,7 +6,9 @@ namespace Plugin.FirebaseCrashlytics
         void Crash();
         void SetBool(string key, bool value);
         void SetInt(string key, int value);
+        void SetLong(string key, long value);
         void SetFloat(string key, float value);
+        void SetDouble(string key, double value);
         void SetString(string key, string value);
         void SetUserIdentifier(string identifier);
         void SetUserName(string name);

@@ -11,7 +11,6 @@
     <RootNamespace>Plugin.FirebaseCrashlytics</RootNamespace>
     <AssemblyName>Plugin.FirebaseCrashlytics</AssemblyName>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <OS></OS>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -62,5 +61,4 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\NuGet.Build.Packaging.0.2.2\build\NuGet.Build.Packaging.targets" Condition="Exists('..\packages\NuGet.Build.Packaging.0.2.2\build\NuGet.Build.Packaging.targets')" />
   <Import Project="..\packages\Xamarin.Build.Download.0.4.11\build\Xamarin.Build.Download.targets" Condition="Exists('..\packages\Xamarin.Build.Download.0.4.11\build\Xamarin.Build.Download.targets')" />
-  <Import Project="..\packages\Xamarin.Firebase.iOS.Crashlytics.3.10.9\build\Xamarin.Firebase.iOS.Crashlytics.targets" Condition="Exists('..\packages\Xamarin.Firebase.iOS.Crashlytics.3.10.9\build\Xamarin.Firebase.iOS.Crashlytics.targets')" />
 </Project>

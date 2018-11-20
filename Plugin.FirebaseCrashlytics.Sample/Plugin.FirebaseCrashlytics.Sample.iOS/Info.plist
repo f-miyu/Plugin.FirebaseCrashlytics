@@ -25,7 +25,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>Plugin.FirebaseCrashlytics.Sample</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.plugin.firebasecrashlytics.sample3</string>
+	<string>com.plugin.firebasecrashlytics.sample</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>CFBundleIconFiles</key>

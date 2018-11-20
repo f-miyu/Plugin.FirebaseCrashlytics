@@ -2,5 +2,6 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Plugin.FirebaseCrashlytics.Sample.Views.MainPage" Title="{Binding Title}">
     <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
         <Button Text="Crash" Command="{Binding CrashCommand}" />
+        <Button Text="Exception" Command="{Binding ExceptionCommand}" />
     </StackLayout>
 </ContentPage>

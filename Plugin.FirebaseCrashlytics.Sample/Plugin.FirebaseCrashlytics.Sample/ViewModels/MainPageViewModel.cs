@@ -12,6 +12,7 @@ namespace Plugin.FirebaseCrashlytics.Sample.ViewModels
     public class MainPageViewModel : ViewModelBase
     {
         public ICommand CrashCommand { get; }
+        public ICommand ExceptionCommand { get; }
 
         public MainPageViewModel(INavigationService navigationService)
             : base(navigationService)
@@ -20,27 +21,24 @@ namespace Plugin.FirebaseCrashlytics.Sample.ViewModels
 
             CrashCommand = new DelegateCommand(() =>
             {
-                CrossFirebaseCrashlytics.Current.SetInt("aaa", 1);
-                CrossFirebaseCrashlytics.Current.SetLong("bbb", long.MaxValue);
-                CrossFirebaseCrashlytics.Current.SetFloat("ccc", 1.5f);
-                CrossFirebaseCrashlytics.Current.SetDouble("ddd", double.MaxValue);
-                CrossFirebaseCrashlytics.Current.SetBool("eee", true);
-                CrossFirebaseCrashlytics.Current.SetString("fff", "test");
-
-                CrossFirebaseCrashlytics.Current.SetUserIdentifier("id123");
-
+                CrossFirebaseCrashlytics.Current.SetInt("value", 100);
                 CrossFirebaseCrashlytics.Current.Log("test");
+                CrossFirebaseCrashlytics.Current.SetUserIdentifier("12345");
+                CrossFirebaseCrashlytics.Current.SetUserName("name");
 
+                CrossFirebaseCrashlytics.Current.Crash();
+            });
+
+            ExceptionCommand = new DelegateCommand(() =>
+            {
                 try
                 {
-                    throw new NullReferenceException();
+                    throw new Exception("exception occured");
                 }
                 catch (Exception e)
                 {
                     CrossFirebaseCrashlytics.Current.LogException(e);
                 }
-
-                CrossFirebaseCrashlytics.Current.Crash();
             });
         }
     }

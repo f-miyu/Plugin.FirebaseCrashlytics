@@ -5,10 +5,10 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{CCC75942-C33E-41AA-AEEB-561089DF06A1}</ProjectGuid>
-    <Description>Plugin.FirebaseCrashlytics</Description>
+    <Description>Cross platform plugin for Firebase Crashlytics</Description>
     <PackageId>Plugin.FirebaseCrashlytics</PackageId>
-    <PackageVersion>1.0.0</PackageVersion>
-    <Authors>f-matsushima</Authors>
+    <PackageVersion>1.0.0-pre</PackageVersion>
+    <Authors>f-miyu</Authors>
     <DevelopmentDependency>false</DevelopmentDependency>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <OutputType>Exe</OutputType>
@@ -16,6 +16,11 @@
     <UsePartialTypes>false</UsePartialTypes>
     <AssemblyName>Plugin.FirebaseCrashlytics.NuGet</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <Owners>f-miyu</Owners>
+    <PackageTags>xamarin, ios, android, xamarin.forms, plugin, firebase, crashlytics</PackageTags>
+    <Title>Firebase Crashlytics Plugin for Xamarin</Title>
+    <PackageProjectUrl>https://github.com/f-miyu/Plugin.FirebaseCrashlytics</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/f-miyu/Plugin.FirebaseCrashlytics/blob/master/LICENSE</PackageLicenseUrl>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

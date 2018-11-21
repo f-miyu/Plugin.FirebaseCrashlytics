@@ -7,7 +7,7 @@ and [Xamarin.Android.Crashlytics](https://www.nuget.org/packages/Xamarin.Android
 ## Setup
 Install Nuget package to each projects.
 
-[Plugin.FirebaseCrashlytics](https://www.nuget.org/packages/Plugin.FirebaseCrashlytics/) [![NuGet](https://img.shields.io/nuget/v/Plugin.FirebaseCrashlytics.svg?label=NuGet)](https://www.nuget.org/packages/Plugin.FirebaseCrashlytics/)
+[Plugin.FirebaseCrashlytics](https://www.nuget.org/packages/Plugin.FirebaseCrashlytics/) [![NuGet](https://img.shields.io/nuget/vpre/Plugin.FirebaseCrashlytics.svg?label=NuGet)](https://www.nuget.org/packages/Plugin.FirebaseCrashlytics/)
 
 ### iOS
 * Add GoogleService-Info.plist to iOS project. Select BundleResource as build action.

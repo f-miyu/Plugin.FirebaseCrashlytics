@@ -7,7 +7,7 @@
     <ProjectGuid>{CCC75942-C33E-41AA-AEEB-561089DF06A1}</ProjectGuid>
     <Description>Cross platform plugin for Firebase Crashlytics</Description>
     <PackageId>Plugin.FirebaseCrashlytics</PackageId>
-    <PackageVersion>1.0.0-pre</PackageVersion>
+    <PackageVersion>1.1.0-pre</PackageVersion>
     <Authors>f-miyu</Authors>
     <DevelopmentDependency>false</DevelopmentDependency>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>

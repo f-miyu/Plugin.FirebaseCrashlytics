@@ -7,7 +7,7 @@
     <ProjectGuid>{CCC75942-C33E-41AA-AEEB-561089DF06A1}</ProjectGuid>
     <Description>Cross platform plugin for Firebase Crashlytics</Description>
     <PackageId>Plugin.FirebaseCrashlytics</PackageId>
-    <PackageVersion>1.1.0-pre</PackageVersion>
+    <PackageVersion>2.0.0-pre1</PackageVersion>
     <Authors>f-miyu</Authors>
     <DevelopmentDependency>false</DevelopmentDependency>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
@@ -51,6 +51,11 @@
       <Version>0.2.2</Version>
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageFile Include="Plugin.FirebaseCrashlytics.targets">
+      <Kind>Build</Kind>
+    </PackageFile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
   <Import Project="$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.targets" Condition="Exists('$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.targets')" />

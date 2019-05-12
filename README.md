@@ -19,6 +19,11 @@ Firebase.Crashlytics.Crashlytics.Configure();
 
 ### Android
 * Add google-services.json to Android project. Select GoogleServicesJson as build action. (If you can't select GoogleServicesJson, reload this android project.)
+* Target Framework must be Android 9.0 (Pie) and Multi-Dex needs to be enabled for the android project.
+```xml
+<TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+<AndroidEnableMultiDex>true</AndroidEnableMultiDex>
+```
 * Initialize as follows in MainActivity.
 ```C#
 Fabric.Fabric.With(this, new Crashlytics.Crashlytics());

@@ -7,7 +7,7 @@ using System.Text;
 
 namespace Plugin.FirebaseCrashlytics.Sample.ViewModels
 {
-    public class ViewModelBase : BindableBase, INavigationAware, IDestructible
+    public class ViewModelBase : BindableBase, INavigationAware, IInitialize, IDestructible
     {
         protected INavigationService NavigationService { get; private set; }
 
@@ -33,7 +33,7 @@ namespace Plugin.FirebaseCrashlytics.Sample.ViewModels
 
         }
 
-        public virtual void OnNavigatingTo(INavigationParameters parameters)
+        public void Initialize(INavigationParameters parameters)
         {
 
         }

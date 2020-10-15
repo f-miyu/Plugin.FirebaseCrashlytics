@@ -16,9 +16,6 @@ namespace Plugin.FirebaseCrashlytics.Sample.Droid
 
             base.OnCreate(bundle);
 
-            Fabric.Fabric.With(this, new Crashlytics.Crashlytics());
-            Crashlytics.Crashlytics.HandleManagedExceptions();
-
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App(new AndroidInitializer()));
         }

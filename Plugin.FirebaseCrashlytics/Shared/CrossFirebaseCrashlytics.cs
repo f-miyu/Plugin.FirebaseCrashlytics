@@ -6,7 +6,7 @@ namespace Plugin.FirebaseCrashlytics
     /// </summary>
     public static class CrossFirebaseCrashlytics
     {
-        static Lazy<IFirebaseCrashlytics> implementation = new Lazy<IFirebaseCrashlytics>(() => CreateFirebaseCrashlytics(), System.Threading.LazyThreadSafetyMode.PublicationOnly);
+        static Lazy<IFirebaseCrashlytics?> implementation = new Lazy<IFirebaseCrashlytics?>(() => CreateFirebaseCrashlytics(), System.Threading.LazyThreadSafetyMode.PublicationOnly);
 
         /// <summary>
         /// Gets if the plugin is supported on the current platform.
@@ -20,7 +20,7 @@ namespace Plugin.FirebaseCrashlytics
         {
             get
             {
-                IFirebaseCrashlytics ret = implementation.Value;
+                IFirebaseCrashlytics? ret = implementation.Value;
                 if (ret == null)
                 {
                     throw NotImplementedInReferenceAssembly();
@@ -29,9 +29,9 @@ namespace Plugin.FirebaseCrashlytics
             }
         }
 
-        static IFirebaseCrashlytics CreateFirebaseCrashlytics()
+        static IFirebaseCrashlytics? CreateFirebaseCrashlytics()
         {
-#if NETSTANDARD1_0 || NETSTANDARD2_0
+#if NETSTANDARD
             return null;
 #else
 #pragma warning disable IDE0022 // Use expression body for methods

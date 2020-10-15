@@ -21,6 +21,8 @@ namespace Plugin.FirebaseCrashlytics.Sample
 
         protected override async void OnInitialized()
         {
+            CrossFirebaseCrashlytics.Current.HandleUncaughtException();
+
             InitializeComponent();
 
             await NavigationService.NavigateAsync("NavigationPage/MainPage");

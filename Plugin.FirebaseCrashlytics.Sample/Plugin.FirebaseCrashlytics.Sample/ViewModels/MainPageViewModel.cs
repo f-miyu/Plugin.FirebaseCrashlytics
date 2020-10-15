@@ -21,25 +21,29 @@ namespace Plugin.FirebaseCrashlytics.Sample.ViewModels
 
             CrashCommand = new DelegateCommand(() =>
             {
-                CrossFirebaseCrashlytics.Current.SetInt("value", 100);
+                CrossFirebaseCrashlytics.Current.SetCustomKey("value", 100);
                 CrossFirebaseCrashlytics.Current.Log("test");
-                CrossFirebaseCrashlytics.Current.SetUserIdentifier("12345");
-                CrossFirebaseCrashlytics.Current.SetUserName("name");
+                CrossFirebaseCrashlytics.Current.SetUserId("12345");
 
-                CrossFirebaseCrashlytics.Current.Crash();
+                ThrowException("crash!");
             });
 
             ExceptionCommand = new DelegateCommand(() =>
             {
                 try
                 {
-                    throw new Exception("exception occured");
+                    ThrowException("exception occured");
                 }
                 catch (Exception e)
                 {
-                    CrossFirebaseCrashlytics.Current.LogException(e);
+                    CrossFirebaseCrashlytics.Current.RecordException(e);
                 }
             });
+        }
+
+        private void ThrowException(string message)
+        {
+            throw new Exception(message);
         }
     }
 }

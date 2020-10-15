@@ -1,4 +1,5 @@
-﻿using Foundation;
+﻿using System;
+using Foundation;
 using Prism;
 using Prism.Ioc;
 using UIKit;
@@ -22,7 +23,6 @@ namespace Plugin.FirebaseCrashlytics.Sample.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             Firebase.Core.App.Configure();
-            Firebase.Crashlytics.Crashlytics.Configure();
 
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App(new iOSInitializer()));

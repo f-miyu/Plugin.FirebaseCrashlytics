@@ -14,36 +14,19 @@ Install Nuget package to each projects.
 * Initialize as follows in AppDelegate. 
 ```C#
 Firebase.Core.App.Configure();
-Firebase.Crashlytics.Crashlytics.Configure();
 ```
+* Refer to [Xamarin.Firebase.iOS.Crashlytics](https://github.com/xamarin/GoogleApisForiOSComponents/tree/master/source/Firebase/Crashlytics) for more information.
 
 ### Android
 * Add google-services.json to Android project. Select GoogleServicesJson as build action. (If you can't select GoogleServicesJson, reload this android project.)
-* Target Framework must be Android 9.0 (Pie). Multi-Dex needs to be enabled if you use other libraries, Xamarin.Forms etc.
-```xml
-<TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
-<AndroidEnableMultiDex>true</AndroidEnableMultiDex>
-```
-* Initialize as follows in MainActivity.
-```C#
-Fabric.Fabric.With(this, new Crashlytics.Crashlytics());
-```
+* Target framework version needs to be Android 10.0.
 * Create a string resource with the name `com.crashlytics.android.build_id`. 
 The value can be whatever you want to uniquely identify a particular build with.
 ```xml
 <string name="com.crashlytics.android.build_id">1.0</string>
 ```
 
-* Optionally, you can format unhandled exceptions for Crashlytics.
-```C#
-Crashlytics.Crashlytics.HandleManagedExceptions();
-```
-
 ## Usage
-### Force a crash
-```C#
-CrossFirebaseCrashlytics.Current.Crash()
-```
 
 ### Add custom logs
 ```C#
@@ -53,37 +36,38 @@ CrossFirebaseCrashlytics.Current.Log("hoge")
 ### Add custom keys
 ```C#
 // bool
-CrossFirebaseCrashlytics.Current.SetBool(key, true);
+CrossFirebaseCrashlytics.Current.SetCustomKey(key, true);
 
 // int
-CrossFirebaseCrashlytics.Current.SetInt(key, 1);
+CrossFirebaseCrashlytics.Current.SetCustomKey(key, 1);
 
 // long
-CrossFirebaseCrashlytics.Current.SetLong(key, 1L);
+CrossFirebaseCrashlytics.Current.SetCustomKey(key, 1L);
 
 // float
-CrossFirebaseCrashlytics.Current.SetFloat(key, 1.0f);
+CrossFirebaseCrashlytics.Current.SetCustomKey(key, 1.0f);
 
 // double
-CrossFirebaseCrashlytics.Current.SetDouble(key, 1.0);
+CrossFirebaseCrashlytics.Current.SetCustomKey(key, 1.0);
 
 // string
-CrossFirebaseCrashlytics.Current.SetString(key, "foo");
+CrossFirebaseCrashlytics.Current.SetCustomKey(key, "foo");
 ```
 
 ### Set user information
 ```C#
 // ID
 CrossFirebaseCrashlytics.Current.SetUserIdentifier("id");
-
-// Name
-CrossFirebaseCrashlytics.Current.SetUserName("name");
-
-// E-mail
-CrossFirebaseCrashlytics.Current.SetUserEmail("user@mail.com");
 ```
 
 ### Log non-fatal exceptions
 ```C#
-CrossFirebaseCrashlytics.Current.LogException(exception);
+CrossFirebaseCrashlytics.Current.RecordException(exception);
+```
+
+### Handle uncaught exception
+you can handle uncaught exceptions for sending the stack trace to Crashlytics. If the argument `shouldThrowFormattedException` is true, it rethrows the formatted exception (`CrashlyticsException`), otherwise it calls `RecordException` on Android. It calls `RecordException` regardless of the argument on iOS.
+
+```C#
+CrossFirebaseCrashlytics.Current.HandleUncaughtException();
 ```

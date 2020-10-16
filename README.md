@@ -2,7 +2,7 @@
 
 A cross platform plugin for Firebase Crashlytics. 
 A wrapper for [Xamarin.Firebase.iOS.Crashlytics](https://www.nuget.org/packages/Xamarin.Firebase.iOS.Crashlytics/) 
-and [Xamarin.Android.Crashlytics](https://www.nuget.org/packages/Xamarin.Android.Crashlytics/).
+and the binding library of firebase-crashlytics.
 
 ## Setup
 Install Nuget package to each projects.
@@ -54,9 +54,8 @@ CrossFirebaseCrashlytics.Current.SetCustomKey(key, 1.0);
 CrossFirebaseCrashlytics.Current.SetCustomKey(key, "foo");
 ```
 
-### Set user information
+### Set user identifier
 ```C#
-// ID
 CrossFirebaseCrashlytics.Current.SetUserIdentifier("id");
 ```
 

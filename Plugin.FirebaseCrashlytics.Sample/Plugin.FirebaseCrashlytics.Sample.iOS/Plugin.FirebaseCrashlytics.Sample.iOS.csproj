@@ -192,8 +192,8 @@
         <Reference Include="Xamarin.iOS" />
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="Xamarin.Forms" Version="4.8.0.1534" />
-        <PackageReference Include="Prism.DryIoc.Forms" Version="7.2.0.1422" />
+        <PackageReference Include="Xamarin.Forms" Version="4.8.0.1560" />
+        <PackageReference Include="Prism.DryIoc.Forms" Version="8.0.0.1909" />
         <PackageReference Include="Xamarin.Firebase.iOS.Crashlytics">
             <Version>4.0.0-beta.7</Version>
         </PackageReference>

@@ -6,8 +6,8 @@
         <RootNamespace>Plugin.FirebaseCrashlytics</RootNamespace>
         <PackageId>Plugin.FirebaseCrashlytics</PackageId>
         <Product>$(AssemblyName) ($(TargetFramework))</Product>
-        <Version>4.0.0</Version>
-        <PackageVersion>4.0.0</PackageVersion>
+        <Version>4.0.0.1</Version>
+        <PackageVersion>4.0.0.1</PackageVersion>
         <PackOnBuild>true</PackOnBuild>
         <NeutralLanguage>en</NeutralLanguage>
         <DefineConstants>$(DefineConstants);</DefineConstants>
@@ -44,16 +44,16 @@
     <ItemGroup Condition=" $(TargetFramework.StartsWith('MonoAndroid')) ">
         <Compile Include="Android\**\*.cs" />
         <PackageReference Include="Xamarin.Google.Dagger" Version="2.25.2.1" />
-        <PackageReference Include="Xamarin.GooglePlayServices.Tasks" Version="117.0.2-preview02" PrivateAssets="contentFiles;analyzers" />
-        <PackageReference Include="Xamarin.Google.Android.DataTransport.TransportRuntime" Version="2.2.2" />
-        <PackageReference Include="Xamarin.Google.Android.DataTransport.TransportBackendCct" Version="2.2.2" />
+        <PackageReference Include="Xamarin.GooglePlayServices.Tasks" Version="117.0.2" PrivateAssets="contentFiles;analyzers" />
+        <PackageReference Include="Xamarin.Google.Android.DataTransport.TransportRuntime" Version="2.2.3" />
+        <PackageReference Include="Xamarin.Google.Android.DataTransport.TransportBackendCct" Version="2.2.3" />
         <PackageReference Include="Xamarin.Google.Android.DataTransport.TransportApi" Version="2.2.0" />
-        <PackageReference Include="Xamarin.Firebase.Iid.Interop" Version="117.0.0-preview02" PrivateAssets="contentFiles;analyzers" />
-        <PackageReference Include="Xamarin.Firebase.Measurement.Connector" Version="118.0.0-preview02" PrivateAssets="contentFiles;analyzers" />
-        <PackageReference Include="Xamarin.Firebase.Iid" Version="120.1.7-preview02" PrivateAssets="contentFiles;analyzers" />
-        <PackageReference Include="Xamarin.Firebase.Encoders.JSON" Version="116.1.0-preview02" PrivateAssets="contentFiles;analyzers" />
-        <PackageReference Include="Xamarin.Firebase.Components" Version="116.0.0-preview02" PrivateAssets="contentFiles;analyzers" />
-        <PackageReference Include="Xamarin.Firebase.Common" Version="119.3.0-preview02" PrivateAssets="contentFiles;analyzers" />
+        <PackageReference Include="Xamarin.Firebase.Iid.Interop" Version="117.0.0" PrivateAssets="contentFiles;analyzers" />
+        <PackageReference Include="Xamarin.Firebase.Measurement.Connector" Version="118.0.0" PrivateAssets="contentFiles;analyzers" />
+        <PackageReference Include="Xamarin.Firebase.Iid" Version="120.1.7" PrivateAssets="contentFiles;analyzers" />
+        <PackageReference Include="Xamarin.Firebase.Encoders.JSON" Version="116.1.0" PrivateAssets="contentFiles;analyzers" />
+        <PackageReference Include="Xamarin.Firebase.Components" Version="116.0.0" PrivateAssets="contentFiles;analyzers" />
+        <PackageReference Include="Xamarin.Firebase.Common" Version="119.3.0" PrivateAssets="contentFiles;analyzers" />
         <PackageReference Include="Square.OkHttp3" Version="3.12.3" />
         <ProjectReference Include="..\Xamarin.Firebase.Crashlytics\Xamarin.Firebase.Crashlytics.csproj" IncludeAssets="none" />
     </ItemGroup>

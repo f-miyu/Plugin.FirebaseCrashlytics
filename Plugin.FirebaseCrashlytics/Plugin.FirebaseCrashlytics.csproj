@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project Sdk="MSBuild.Sdk.Extras/2.0.54">
+<Project Sdk="MSBuild.Sdk.Extras/2.1.2">
     <PropertyGroup>
         <TargetFrameworks>netstandard2.0;Xamarin.iOS10;MonoAndroid90;MonoAndroid10.0</TargetFrameworks>
         <AssemblyName>Plugin.FirebaseCrashlytics</AssemblyName>
         <RootNamespace>Plugin.FirebaseCrashlytics</RootNamespace>
         <PackageId>Plugin.FirebaseCrashlytics</PackageId>
         <Product>$(AssemblyName) ($(TargetFramework))</Product>
-        <Version>4.0.0.1</Version>
-        <PackageVersion>4.0.0.1</PackageVersion>
+        <Version>4.1.0</Version>
+        <PackageVersion>4.1.0</PackageVersion>
         <PackOnBuild>true</PackOnBuild>
         <NeutralLanguage>en</NeutralLanguage>
         <DefineConstants>$(DefineConstants);</DefineConstants>
@@ -59,7 +59,7 @@
     </ItemGroup>
     <ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.iOS')) ">
         <Compile Include="iOS\**\*.cs" />
-        <PackageReference Include="Xamarin.Firebase.iOS.Crashlytics" Version="4.0.0-beta.7" />
+        <PackageReference Include="Xamarin.Firebase.iOS.Crashlytics" Version="4.6.2" />
     </ItemGroup>
     <Target DependsOnTargets="ResolveReferences" Name="CopyProjectReferencesToPackage">
         <ItemGroup>

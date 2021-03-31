@@ -25,6 +25,10 @@ The value can be whatever you want to uniquely identify a particular build with.
 ```xml
 <string name="com.crashlytics.android.build_id">1.0</string>
 ```
+* Finally add the Initialization script to the android project inside the `OnCreate()` method
+```C#
+FirebaseApp.InitializeApp(this);
+```
 
 ## Usage
 
